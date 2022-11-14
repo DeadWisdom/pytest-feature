@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "pytest-feature"
+version = "0.1.0"
+description = "Pytest behavior testing with effortless bdd in mind"
+authors = ["Brantley Harris <deadwisdom@gmail.com>"]
+license = "MIT"
+
+[tool.poetry.plugins.pytest11]
+"pytest_feature" = "pytest_feature.plugin"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+pytest = "^7.2.0"
+gherkin-official = {git = "https://github.com/cucumber/gherkin-python"}
+rich = "^12.6.0"
+inflection = "^0.5.1"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
